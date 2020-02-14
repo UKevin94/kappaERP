@@ -1,5 +1,7 @@
 package formation.kappaerp.entities;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -23,6 +25,7 @@ public class Order {
     private String products;
 
     @Column(name="order_date")
+    @DateTimeFormat(pattern="MM-dd-yyyy")
     private Date orderDate;
 
     @Column(name="order_price")
