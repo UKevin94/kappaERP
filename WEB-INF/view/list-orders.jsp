@@ -16,6 +16,7 @@
        <th>Products</th>
        <th>Order date</th>
        <th>Price (in €)</th>
+       <th>Update</th>
      </tr>
 
      <c:forEach var="order" items="${orders}">
@@ -26,6 +27,7 @@
          <td> ${order.products} </td>
          <td> ${order.orderDate} </td>
          <td> ${order.price} </td>
+         <td><a href="/order/viewOrder?orderId=${order.id}">Update</a></td>
       </tr>
     </c:forEach>
    </table>

@@ -38,12 +38,14 @@ public class UserController {
 
     @GetMapping("/viewUser")
     public String viewUser(@RequestParam("userId") int userId, Model model){
-
+        User user = userService.getUser(userId);
+        model.addAttribute("user",user);
+        return "user-form";
     }
 
     //@GetMapping("/deleteUser")
     @DeleteMapping("/deleteUser")
     public String deleteUser(@RequestParam("userId") int userId, Model model){
-
+        return "";
     }
 }

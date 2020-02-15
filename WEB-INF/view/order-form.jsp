@@ -13,6 +13,8 @@
  <h3>Add Order</h3>
 
   <form:form action="saveOrder" modelAttribute="order" method="POST">
+     <form:hidden path="id"/>
+
      <label>Customer:</label>
      <form:input path="customer"/> <br/>
 

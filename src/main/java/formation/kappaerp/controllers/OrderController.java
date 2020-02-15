@@ -41,13 +41,15 @@ public class OrderController {
 
     @GetMapping("/viewOrder")
     public String viewOrder(@RequestParam("orderId") int orderId, Model model){
-
+        Order order = orderService.getOrder(orderId);
+        model.addAttribute("order", order);
+        return "order-form";
     }
 
     //@GetMapping("/deleteOrder")
     @DeleteMapping("/deleteOrder")
     public String deleteOrder(@RequestParam("orderId") int orderId, Model model){
-
+        return "";
     }
 
     @InitBinder("order")

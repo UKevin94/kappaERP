@@ -28,12 +28,13 @@ public class UserDAOImpl implements UserDAO {
     @Override
     public void saveUser(User newUser) {
         Session session = factory.getCurrentSession();
-        session.save(newUser);
+        session.saveOrUpdate(newUser);
     }
 
     @Override
     public User getUser(int userId) {
-        return null;
+        Session session = factory.getCurrentSession();
+        return session.get(User.class, userId);
     }
 
     @Override

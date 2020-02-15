@@ -13,6 +13,8 @@
 
   <form:form action="saveUser" modelAttribute="user" method="POST">
 
+     <form:hidden path="id"/>
+
      <label>Login:</label>
      <form:input path="login"/> <br/>
 

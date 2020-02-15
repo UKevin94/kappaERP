@@ -15,6 +15,7 @@
        <th>Password</th>
        <th>Mail</th>
        <th>Admin</th>
+       <th>Update</th>
      </tr>
 
      <c:forEach var="user" items="${users}">
@@ -24,6 +25,7 @@
          <td> ${user.password} </td>
          <td> ${user.mail} </td>
          <td> ${user.admin} </td>
+         <td><a href="/user/viewUser?userId=${user.id}">Update</a></td>
       </tr>
     </c:forEach>
    </table>
