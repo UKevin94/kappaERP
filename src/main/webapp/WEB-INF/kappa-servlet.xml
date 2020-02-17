@@ -54,6 +54,16 @@
             </props>
         </property>
     </bean>
+    <!--<bean id="sessionFactory2" class="org.hibernate.SessionFactory">
+        <property name="dataSource" ref="mySQLDataSource" />
+        <property name="packagesToScan" value="formation.kappaerp.entities" />
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+            </props>
+        </property>
+    </bean>-->
 
     <!-- Step 3: Setup Hibernate transaction manager -->
     <bean id="mainTransactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">

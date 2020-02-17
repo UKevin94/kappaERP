@@ -39,6 +39,9 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public void deleteUser(int userId) {
-
+        Session session = factory.getCurrentSession();
+        Query query = session.createQuery("DELETE FROM users WHERE id=:Id");
+        query.setParameter("Id",userId);
+        query.executeUpdate();
     }
 }

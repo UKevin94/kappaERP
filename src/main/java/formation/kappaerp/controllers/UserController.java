@@ -46,6 +46,7 @@ public class UserController {
     //@GetMapping("/deleteUser")
     @DeleteMapping("/deleteUser")
     public String deleteUser(@RequestParam("userId") int userId, Model model){
-        return "";
+        userService.deleteUser(userId);
+        return "redirect:/user/listUser";
     }
 }

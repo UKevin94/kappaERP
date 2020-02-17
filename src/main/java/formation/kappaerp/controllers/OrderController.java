@@ -49,7 +49,8 @@ public class OrderController {
     //@GetMapping("/deleteOrder")
     @DeleteMapping("/deleteOrder")
     public String deleteOrder(@RequestParam("orderId") int orderId, Model model){
-        return "";
+        orderService.deleteOrder(orderId);
+        return "redirect:/order/listOrder";
     }
 
     @InitBinder("order")

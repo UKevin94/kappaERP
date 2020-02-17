@@ -16,6 +16,7 @@
        <th>Mail</th>
        <th>Admin</th>
        <th>Update</th>
+       <th>Delete</th>
      </tr>
 
      <c:forEach var="user" items="${users}">
@@ -26,6 +27,7 @@
          <td> ${user.mail} </td>
          <td> ${user.admin} </td>
          <td><a href="/user/viewUser?userId=${user.id}">Update</a></td>
+         <td><a href="/user/deleteUser?userId=${user.id}" onclick="if(!confirm('Are you sure?')) return false;">Delete</a></td>
       </tr>
     </c:forEach>
    </table>

@@ -17,6 +17,7 @@
        <th>Order date</th>
        <th>Price (in €)</th>
        <th>Update</th>
+       <th>Delete</th>
      </tr>
 
      <c:forEach var="order" items="${orders}">
@@ -28,6 +29,7 @@
          <td> ${order.orderDate} </td>
          <td> ${order.price} </td>
          <td><a href="/order/viewOrder?orderId=${order.id}">Update</a></td>
+         <td><a href="/order/deleteOrder?orderId=${order.id}" onclick="if(!confirm('Are you sure?')) return false;">Delete</a></td>
       </tr>
     </c:forEach>
    </table>
